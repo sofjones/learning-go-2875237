@@ -5,14 +5,22 @@ import (
 )
 
 func main() {
-	fmt.Println("Pointers")
-	anInt := 4
-	var p = &anInt
+	var dogs [4]string
+	dogs[0] = "labradoodle"
+	dogs[1] = "cavapoo"
+	dogs[2] = "golden retriever"
 
-	fmt.Println(&anInt)
-	fmt.Println(*p)
-	*p = anInt / 2
-	fmt.Println("set pointer value to half anInt value", *p)
-	fmt.Println(anInt) //anInt value is changed
-	//fmt.Printf("%d",anInt)
+	var places = []string{"san diego", "newport beach", "victoria"}
+	//fmt.Println(places[1])
+	places = append(places, "petaluma")
+
+	//fmt.Println("places been: ", len(places))
+
+	provinces := make(map[string]string)
+	provinces["BC"] = "British Columbia"
+	provinces["NB"] = "New Brunswick"
+	provinces["AB"] = "Alberta"
+
 }
+
+// Thank you all for being so welcoming! My name is Sofia, I'm new to the Secret Scanning Experiences team. I live in Southern California and love hiking, soccer, cycling, puzzles and learning about how things work. I’m wildly happy to be here and am looking forward to meeting everyone.
