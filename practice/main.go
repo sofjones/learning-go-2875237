@@ -2,26 +2,34 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
 )
 
 
 func main() {
-	rand.Seed(time.Now().Unix())
-	dayOfWeek := rand.Intn(7) + 1
-	fmt.Println("day of week: ", dayOfWeek)	
-	var result string
-	switch dayOfWeek {
-	case 1:
-		result = "It's sunday!"
-	case 2:
-		result = "it's monday"
-	case 3:
-		result = "its tuesday"
-	default:
-		result = "another day"
-	}
-	fmt.Println(result)
+	colors := []string{"Burgundy", "Navy", "Majenta"}
+	fmt.Println(colors)
 
+	for i := 0; i < len(colors); i++ {
+		fmt.Println(colors[i])
+	}
+	
+	value := 0
+	for value < 2 {
+		fmt.Println(value)
+		value++
+	}
+	
+	for i := range colors {
+		if colors[i]  == "Navy" {
+			goto theEnd
+		}
+		fmt.Println(colors[i])
+	}
+
+	for _, color := range colors {
+		fmt.Println(color)
+	}
+	
+theEnd:
+	fmt.Println("end of program")
 }
